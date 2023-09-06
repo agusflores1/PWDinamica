@@ -1,0 +1,65 @@
+
+form{
+    width: 40%;
+    padding: 16px;
+    background-color:gainsboro;
+    border-radius: 10px;
+}
+form label{
+    font-weight: bold;
+    width: 72px;
+}
+input{
+    margin: 3px;
+}
+select{
+    margin: 8px;
+}
+
+h1,h2{margin: 10px}
+
+.rta{
+    width: 40%;
+    padding: 16px;
+    background-color:rgb(220, 220, 220);
+    border-radius: 10px;
+
+}
+
+
+/* Estilos del menú */
+.menuTP1 {
+    text-align: left;
+    padding: 10px;
+    width: 40%;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+    background-color: gainsboro;
+}
+
+.menuTP1 h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.menuTP1 ul {
+    text-align: left;
+    padding-left: 0;
+}
+
+.menuTP1 li {
+    margin-bottom: 10px;
+    font-size: 15px;
+
+}
+
+.menuTP1 a {
+    color: #333;
+    font-size: 18px;
+    transition: color 0.3s;
+    font-weight: bold;
+}
+
+.menuTP1 a:hover {
+    color: #f39c12;
+}
