@@ -44,30 +44,33 @@ class ControlAuto {
         $auto = new Auto();
         return $auto->listar();
     }
-    public function buscarAuto($datos){
+    public function buscarAuto($datos) {
         $autos = $this->listarAutos();
         $autoIngresado = $datos["patente"];
-        $autoEncontrado = ""; 
+        $autoEncontrado = [];
     
         foreach ($autos as $auto) {
             if ($autoIngresado === $auto->getPatente()) {
-                $autoEncontrado = "Patente: " . $auto->getPatente() . "<br>"
-                . "Marca: " . $auto->getMarca() . "<br>"
-                . "Modelo: " . $auto->getModelo() . "<br>";
-                
+                $autoEncontrado = [
+                    "Patente" => $auto->getPatente(),
+                    "Marca" => $auto->getMarca(),
+                    "Modelo" => $auto->getModelo(),
+                ];
+    
                 $duenio = $auto->getObjDuenio();
-                $autoEncontrado .= "Dueño: " . $duenio->getApellido() . " " . $duenio->getNombre() . "<br>";
-            
+                $autoEncontrado["Duenio"] = $duenio->getApellido() . " " . $duenio->getNombre();
+    
                 break; // Terminar el bucle cuando se encuentre un auto
             }
         }
     
-        if ($autoEncontrado === "") {
-            $autoEncontrado = "No se encontraron registros.";
+        if (!$autoEncontrado) {
+            $autoEncontrado = ["Mensaje" => "No se encontraron registros."];
         }
     
         return $autoEncontrado;
     }
+    
 
     public function buscarDuenio($datos){
         $autos = $this->listarAutos();

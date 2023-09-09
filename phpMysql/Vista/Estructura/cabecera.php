@@ -16,7 +16,7 @@
         <li class="nav-item"><a class="nav-link" href="/TP1/Vista/ej1/index.php">TP 1</a></li>
         <li class="nav-item"><a class="nav-link" href="../../../TP2/Vista/Ej1/index.php">TP 2</a></li>
         <li class="nav-item"><a class="nav-link" href="../../../TP3/vista/Ej1/index.php">TP 3</a></li>
-        <li class="nav-item"><a class="nav-link" href="../../../phpMysql/Vista/Ej3/index.php">TP 4 </a></li>
+        <li class="nav-item"><a class="nav-link" href="../../../phpMysql/Vista/Ej3/verAutos.php">TP 4 </a></li>
     </ul>
 </nav>
 <div class="container-fluid">
@@ -24,14 +24,13 @@
 <nav id="sidebar" class="col-md-3 col-lg-2 bg-light sidebar d-flex flex-column vh-100">
             <div class="position-sticky pt-3 flex-grow-1">
                 <ul class="nav flex-column">
-                    <li class="nav-item"><a class="nav-link active" href="/TP1/Vista/ej1/index.php">Ejercicio 1</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/TP1/Vista/ej2/index.php">Ejercicio 2</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/TP1/Vista/ej3/index.php">Ejercicio 3</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/TP1/Vista/ej4/index.php">Ejercicio 4</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="../Ej3/verAutos.php">Ejercicio 1</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../Ej4/buscarAutos.php">Ejercicio 2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../Ej5/listaPersonas.php">Ejercicio 3</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../Ej6/index.php">Ejercicio 4</a></li>
                     <li class="nav-item"><a class="nav-link" href="/TP1/Vista/ej5/index.php">Ejercicio 5</a></li>
                     <li class="nav-item"><a class="nav-link" href="/TP1/Vista/ej6/index.php">Ejercicio 6</a></li>
                     <li class="nav-item"><a class="nav-link" href="/TP1/Vista/ej7/index.php">Ejercicio 7</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/TP1/Vista/ej8/index.php">Ejercicio 8</a></li>
                 </ul>
             </div>
         </nav>

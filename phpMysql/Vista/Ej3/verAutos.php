@@ -5,9 +5,9 @@
     include_once '../../configuracion.php';
   //  include_once("../../util/funciones.php");
     ?>
-    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 mb-4">
-    <div class="card w-50 mb-4">
-    <div class="card-body">
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 mb-5">
+    <div class="card w-50 mb-5">
+    <div class="card-body mb-5">
       <h5 class="card-title">Lista de Autos:</h5>
       <?php
         $auto = new ControlAuto();
@@ -20,18 +20,12 @@
                  echo "Marca: " . $auto->getMarca() . "<br>";
                  echo "Modelo: " . $auto->getModelo() . "<br>";
         $duenio = $auto->getObjDuenio();
-        if ($duenio instanceof Persona) {
-            echo "Dueño: " . $duenio->getApellido() . " " . $duenio->getNombre() . "<br>";
-        } else {
-            echo "Dueño: No encontrado <br>";
-        }
-
+        echo "Dueño: " . $duenio->getApellido() . " " . $duenio->getNombre() . "<br>";
         echo "</pre>";
     }
 } else {
     echo "<br> No se encontraron registros.";
 }
-echo "<br>----------------------------------------------------------------------------------<br>";
         ?>
     </div>
   </div>

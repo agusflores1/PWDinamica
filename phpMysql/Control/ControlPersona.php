@@ -1,15 +1,22 @@
 <?php
 // ControlPersona.php
 class ControlPersona {
-    public function agregarPersona($nroDni, $apellido, $nombre, $fechaNac, $telefono, $domicilio) {
+    public function agregarPersona($datos) {
         $persona = new Persona();
+        $nroDni=$datos["DNI"];
+        $apellido=$datos["apellido"]; 
+        $nombre=$datos["nombre"];
+        $fechaNac=$datos["fechaNac"];
+        $telefono=$datos["telefono"];
+        $domicilio=$datos["domicilio"];
         $persona->setear($nroDni, $apellido, $nombre, $fechaNac, $telefono, $domicilio);
         
         if ($persona->insertar()) {
-            return "Persona agregada con éxito.";
+            $operacion= "Persona agregada con éxito.";
         } else {
-            return "Error al agregar la persona: " . $persona->getmensajeoperacion();
+            $operacion= "Error al agregar la persona: " . $persona->getmensajeoperacion();
         }
+        return $operacion;
     }
     
     public function modificarPersona($nroDni, $apellido, $nombre, $fechaNac, $telefono, $domicilio) {
