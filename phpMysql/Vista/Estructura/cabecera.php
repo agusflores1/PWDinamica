@@ -28,9 +28,9 @@
                     <li class="nav-item"><a class="nav-link" href="../Ej4/buscarAutos.php">Ejercicio 2</a></li>
                     <li class="nav-item"><a class="nav-link" href="../Ej5/listaPersonas.php">Ejercicio 3</a></li>
                     <li class="nav-item"><a class="nav-link" href="../Ej6/index.php">Ejercicio 4</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/TP1/Vista/ej5/index.php">Ejercicio 5</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/TP1/Vista/ej6/index.php">Ejercicio 6</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/TP1/Vista/ej7/index.php">Ejercicio 7</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../Ej7/index.php">Ejercicio 5</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">Ejercicio 6</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">Ejercicio 7</a></li>
                 </ul>
             </div>
         </nav>

@@ -8,8 +8,7 @@
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 mb-5">
     <div class="card w-50 mb-5">
     <div class="card-body mb-5">
-      <h5 class="card-title">Lista de Personas:</h5>
-      <a href="autosPersonas.php">BUSCAR AUTO POR DNI</a>
+      <h5 class="card-title">Lista de Personas:</h5> 
       <?php
         $persona = new ControlPersona();
         $personas = $persona->listarPersonas();
@@ -22,9 +21,12 @@
                 echo "Fecha nacimiento: " . $persona->getFechaNac() . "<br>";
                  echo "Telefono: " . $persona->getTelefono() . "<br>";
                  echo "Domicilio: " . $persona->getDomicilio() . "<br>";
-                 echo "</pre>"; }} 
+                 echo "</pre>"; 
+                }
+              } 
         else {echo "<br> No se encontraron registros.";}
         ?>
+         <a href="autosPersonas.php">BUSCAR AUTO POR DNI</a>
     </div>
   </div>
 </main>

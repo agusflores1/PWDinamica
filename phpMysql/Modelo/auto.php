@@ -84,7 +84,7 @@ class Auto {
             '" . $this->getMarca() . "',
             '" . $this->getModelo() . "',
             '" . $duenioDni . "');";
-            echo $sql;
+            //echo $sql;
         if ($base->Iniciar()) {
             if ($elid = $base->Ejecutar($sql)) {
                 $resp = true;
