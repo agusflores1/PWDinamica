@@ -13,16 +13,22 @@
       $datos=data_submitted();
      $auto = new ControlAuto();
      $autoEncontrado=$auto->buscarAuto($datos);
-       // Si se encontró un auto, muestra los datos en una tabla
-       echo '<table class="table">';
-       echo '<tr><th>Patente</th><th>Marca</th><th>Modelo</th><th>Dueño</th></tr>';
-       echo '<tr>';
-       echo '<td>' . $autoEncontrado['Patente'] . '</td>';
-       echo '<td>' . $autoEncontrado['Marca'] . '</td>';
-       echo '<td>' . $autoEncontrado['Modelo'] . '</td>';
-       echo '<td>' . $autoEncontrado['Duenio'] . '</td>';
-       echo '</tr>';
-       echo '</table>';
+     if($autoEncontrado)
+     {// Si se encontró un auto, muestra los datos en una tabla
+      echo '<table class="table">';
+      echo '<tr><th>Patente</th><th>Marca</th><th>Modelo</th><th>Dueño</th></tr>';
+      echo '<tr>';
+      echo '<td>' . $autoEncontrado['Patente'] . '</td>';
+      echo '<td>' . $autoEncontrado['Marca'] . '</td>';
+      echo '<td>' . $autoEncontrado['Modelo'] . '</td>';
+      echo '<td>' . $autoEncontrado['Duenio'] . '</td>';
+      echo '</tr>';
+      echo '</table>';
+     }
+     else{
+      echo "No se encontro registro de esa patente";
+     }
+       
         ?>
         
     </div>

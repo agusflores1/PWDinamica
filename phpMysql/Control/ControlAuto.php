@@ -67,7 +67,7 @@ class ControlAuto {
         }
     
         if (!$autoEncontrado) {
-            $autoEncontrado = ["Mensaje" => "No se encontraron registros."];
+            $autoEncontrado = null;
         }
     
         return $autoEncontrado;
