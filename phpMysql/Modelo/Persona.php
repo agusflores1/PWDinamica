@@ -1,5 +1,5 @@
 <?php 
-class persona {
+class Persona {
     private $nroDni;
     private $apellido;
     private $nombre;
@@ -98,7 +98,7 @@ class persona {
     public function cargar(){
         $resp = false;
         $base=new BaseDatos();
-        $sql="SELECT * FROM persona WHERE id = ".$this->getNroDni();
+        $sql="SELECT * FROM persona WHERE nroDni = ".$this->getNroDni();
         if ($base->Iniciar()) {
             $res = $base->Ejecutar($sql);
             if($res>-1){
@@ -177,7 +177,7 @@ class persona {
         return $resp;
     }
     
-    public static function listar($parametro=""){
+    public function listar($parametro=""){
         $arreglo = array();
         $base=new BaseDatos();
         $sql="SELECT * FROM persona ";
