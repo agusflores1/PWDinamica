@@ -9,10 +9,11 @@ class ControlAuto {
         $auto->setear($patente, $marca, $modelo, $duenio);
         
         if ($auto->insertar()) {
-            return "Auto agregado con éxito.";
+            $operacion= "Auto agregado con éxito.";
         } else {
-            return "Error al agregar el auto: " . $auto->getmensajeoperacion();
-        }
+            $operacion= "Error al agregar el auto: " . $auto->getmensajeoperacion();
+        } 
+        return $operacion;
     }
     
     public function modificarAuto($patente, $marca, $modelo, $nroDniDuenio) {
@@ -23,10 +24,10 @@ class ControlAuto {
         $auto->setear($patente, $marca, $modelo, $duenio);
         
         if ($auto->modificar()) {
-            return "Auto modificado con éxito.";
+            $operacion= "Auto modificado con éxito.";
         } else {
-            return "Error al modificar el auto: " . $auto->getmensajeoperacion();
-        }
+            $operacion= "Error al modificar el auto: " . $auto->getmensajeoperacion();
+        } return $operacion;
     }
     
     public function eliminarAuto($patente) {
@@ -34,10 +35,11 @@ class ControlAuto {
         $auto->setPatente($patente);
         
         if ($auto->eliminar()) {
-            return "Auto eliminado con éxito.";
+            $operacion= "Auto eliminado con éxito.";
         } else {
-            return "Error al eliminar el auto: " . $auto->getmensajeoperacion();
+            $operacion= "Error al eliminar el auto: " . $auto->getmensajeoperacion();
         }
+        return $operacion;
     }
     
     public function listarAutos() {

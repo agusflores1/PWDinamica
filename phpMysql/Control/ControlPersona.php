@@ -24,10 +24,11 @@ class ControlPersona {
         $persona->setear($nroDni, $apellido, $nombre, $fechaNac, $telefono, $domicilio);
         
         if ($persona->modificar()) {
-            return "Persona modificada con éxito.";
+            $operacion= "Persona modificada con éxito.";
         } else {
-            return "Error al modificar la persona: " . $persona->getmensajeoperacion();
+            $operacion= "Error al modificar la persona: " . $persona->getmensajeoperacion();
         }
+        return $operacion;
     }
     
     public function eliminarPersona($nroDni) {
@@ -35,10 +36,11 @@ class ControlPersona {
         $persona->setNroDni($nroDni);
         
         if ($persona->eliminar()) {
-            return "Persona eliminada con éxito.";
+            $operacion= "Persona eliminada con éxito.";
         } else {
-            return "Error al eliminar la persona: " . $persona->getmensajeoperacion();
+            $operacion= "Error al eliminar la persona: " . $persona->getmensajeoperacion();
         }
+        return $operacion;
     }
     
     public function listarPersonas() {
