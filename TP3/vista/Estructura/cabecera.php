@@ -17,8 +17,8 @@
 <header class="d-flex justify-content-center py-3">
       <ul class="nav nav-pills">
         <li class="nav-item"><a  href="/TP1/Vista/ej1/index.php" class="nav-link " aria-current="page">TP 1</a></li>
-        <li class="nav-item"><a href="/TP2/Vista/Ej1/index.php" class="nav-link active">TP 2</a></li>
-        <li class="nav-item"><a href="/TP3/vista/Ej1/index.php" class="nav-link">TP 3</a></li>
+        <li class="nav-item"><a href="/TP2/Vista/Ej1/index.php" class="nav-link ">TP 2</a></li>
+        <li class="nav-item"><a href="/TP3/vista/Ej1/index.php" class="nav-link active">TP 3</a></li>
         <li class="nav-item"><a href="/phpMysql/Vista/Ej3/verAutos.php" class="nav-link ">TP 4</a></li>
       </ul>
     </header>
