@@ -77,11 +77,9 @@ class ControlAuto {
         return $operacion;
     }
 
-
-
-
     
-    public function eliminarAuto($patente) {
+    public function eliminarAuto($datos) {
+        $patente=$datos["patente"];
         $auto = new Auto();
         $auto->setPatente($patente);
         

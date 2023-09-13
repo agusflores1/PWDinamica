@@ -6,13 +6,14 @@
             <h3 class="text-primary">Ingresar auto:</h3>
         </div>
         <div class="card-body">
-            <form class="d-flex flex-column needs-validation" method="post" action="accion.php" id="form7" name="form7" onsubmit="return validarAuto()">
+            <form class="d-flex flex-column needs-validation" method="post" action="accionNuevoAuto.php" id="form7" name="form7" onsubmit="return validarAuto()">
                 <div class="row">
                     <div class="col-md-3 mt-3">
                         <label class="form-label">Patente:</label>
                         <input type="text" name="patente" id="patente" class="form-control validate" maxlength="7">
                         <div class="invalid-feedback">
-                            Por favor, ingrese su patente.
+                        Ingrese su patente. 
+                        ejemplo (ABC 123)
                         </div>
                     </div>
                     <div class="col-md-3 mt-3">

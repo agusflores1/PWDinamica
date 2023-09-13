@@ -39,9 +39,8 @@ class ControlPersona {
         return $operacion;
     }
     
-
-
-    public function eliminarPersona($nroDni) {
+    public function eliminarPersona($datos) {
+        $nroDni=$datos["nroDni"];
         $persona = new Persona();
         $persona->setNroDni($nroDni);
         

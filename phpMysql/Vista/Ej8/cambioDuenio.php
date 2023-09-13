@@ -6,7 +6,7 @@
             <h3 class="text-primary">Cambio de dueño:</h3>
         </div>
         <div class="card-body">
-            <form class="d-flex flex-column needs-validation" method="GET" action="accion.php" id="form8" name="form8" onsubmit="return validarCambioDuenio()">
+            <form class="d-flex flex-column needs-validation" method="GET" action="accionCambioDuenio.php" id="form8" name="form8" onsubmit="return validarCambioDuenio()">
                 <div class="row">
                     <div class="col-md-4 mt-3">
                         <label class="form-label">Ingrese su patente:</label>

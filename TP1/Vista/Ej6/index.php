@@ -1,7 +1,7 @@
 <?php  include_once ("../Estructura/cabecera.php"); ?>
 
 <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 mb-5">
-    <div class="card col-sm-10 p-3 mb-2">
+    <div class="card col-sm-10 p-3 mb-5">
         <div class="card-header">
             <h3 class="text-primary">Formulario:</h3>
         </div>

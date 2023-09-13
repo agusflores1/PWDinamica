@@ -6,7 +6,7 @@
             <h3 class="text-primary">Ingresar Persona:</h3>
         </div>
         <div class="card-body">
-            <form class="d-flex flex-column  needs-validation" method="post" action="accion.php" id="form6" name="form6">
+            <form class="d-flex flex-column  needs-validation" method="post" action="accionNuevaPersona.php" id="form6" name="form6">
                 <div class="row">
                     <div class="col-md-4">
                         <label class="form-label">Nombre:</label>

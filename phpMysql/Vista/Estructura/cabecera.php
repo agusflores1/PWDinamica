@@ -31,8 +31,8 @@
                     <li class="nav-item"><a class="nav-link " href="../Ej3/verAutos.php">Ejercicio 1</a></li>
                     <li class="nav-item"><a class="nav-link" href="../Ej4/buscarAutos.php">Ejercicio 2</a></li>
                     <li class="nav-item"><a class="nav-link" href="../Ej5/listaPersonas.php">Ejercicio 3</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../Ej6/index.php">Ejercicio 4</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../Ej7/index.php">Ejercicio 5</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../Ej6/nuevaPersona.php">Ejercicio 4</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../Ej7/nuevoAuto.php">Ejercicio 5</a></li>
                     <li class="nav-item"><a class="nav-link" href="../Ej8/cambioDuenio.php">Ejercicio 6</a></li>
                     <li class="nav-item"><a class="nav-link" href="../Ej9/buscarPersona.php ">Ejercicio 7</a></li>
                 </ul>

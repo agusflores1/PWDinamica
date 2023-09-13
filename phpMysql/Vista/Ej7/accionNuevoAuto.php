@@ -23,7 +23,7 @@
       }
       else echo $datosAuto;
         ?>
-         <a href='../ej7/index.php' class='btn btn-primary float-end'>Volver</a>
+
     </div>
   </div>
 </main>

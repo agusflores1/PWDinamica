@@ -8,6 +8,7 @@
 <div class="card w-50">
     <div class="card-body">
     <?php
+     $carga="recuerde ingresar documentos .text";
     if($_FILES["archivo"]["error"]<=0)
     {   
        $datos=data_submitted();
