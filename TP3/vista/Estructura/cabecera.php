@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -6,18 +7,18 @@
     <!---<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-xrRv1JVd0a42KGp0xpG5PA6z5z5Tz7h3+TuPxvIHdd/ClwEa5G6U1d6I5z0pNPbm" crossorigin="anonymous"> 
     ---><title>TP phpMysql</title>
-    <link rel="stylesheet" href="/TP3/vista/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/TP3/vista/css/bootstrap.min.css.map">
-    <link rel="stylesheet" href="/TP3/vista/css/bootstrapValidator.min.css" >
-    <link rel="stylesheet" href="/TP3/vista/css/estilos.css" >
+    <link rel="stylesheet" href="/TP2/Vista/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/TP2/Vista/css/bootstrap.min.css.map">
+    <link rel="stylesheet" href="/TP2/Vista/css/bootstrapValidator.min.css" >
+    <link rel="stylesheet" href="/TP2/Vista/css/estilos.css" >
 </head>
 <body>
 <div class="container-fluid">
-     <header class="d-flex justify-content-center py-3">
+<header class="d-flex justify-content-center py-3">
       <ul class="nav nav-pills">
         <li class="nav-item"><a  href="/TP1/Vista/ej1/index.php" class="nav-link " aria-current="page">TP 1</a></li>
-        <li class="nav-item"><a href="/TP2/Vista/Ej1/index.php" class="nav-link">TP 2</a></li>
-        <li class="nav-item"><a href="/TP3/vista/Ej1/index.php" class="nav-link active">TP 3</a></li>
+        <li class="nav-item"><a href="/TP2/Vista/Ej1/index.php" class="nav-link active">TP 2</a></li>
+        <li class="nav-item"><a href="/TP3/vista/Ej1/index.php" class="nav-link">TP 3</a></li>
         <li class="nav-item"><a href="/phpMysql/Vista/Ej3/verAutos.php" class="nav-link ">TP 4</a></li>
       </ul>
     </header>
@@ -34,6 +35,4 @@
                 </ul>
         </nav> 
 </div><!-- esto es una columna--> 
-
-
 
