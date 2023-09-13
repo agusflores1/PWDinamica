@@ -8,14 +8,14 @@
             <label>Lunes:</label>
             <input type="text" class="form-control" id="lunes_form" name="lunes_form" placeholder="Ingresa un número" maxlength="5">
             <div class="invalid-feedback">
-                Por favor, ingrese un número válido.
+            Ingrese un número válido.
             </div>
         </div>
         <div class="form-group col-md-2"> 
             <label>Martes:</label>
             <input type="text" class="form-control"  id="martes_form" name="martes_form" placeholder="Ingrese un número" maxlength="5">
             <div class="invalid-feedback">
-                Por favor, ingrese un número válido.
+                Ingrese un número válido.
             </div>
         </div>
 
@@ -23,21 +23,21 @@
             <label>Miércoles:</label>
             <input type="text" class="form-control" id="miercoles_form" name="miercoles_form" placeholder="Ingrese un número" maxlength="5">
             <div class="invalid-feedback">
-                Por favor, ingrese un número válido.
+            Ingrese un número válido.
             </div>
         </div>
         <div class="form-group col-md-2">
             <label>Jueves:</label>
             <input type="text" class="form-control" id="jueves_form" name="jueves_form" placeholder="Ingrese un número" maxlength="5">
             <div class="invalid-feedback">
-                Por favor, ingrese un número válido.
+            Ingrese un número válido.
             </div>
         </div>
         <div class="form-group col-md-2">
             <label>Viernes:</label>
             <input type="text" class="form-control"  id="viernes_form" name="viernes_form" placeholder="Ingrese un número" maxlength="5">
             <div class="invalid-feedback">
-                Por favor, ingrese un número válido.
+            Ingrese un número válido.
             </div>
         </div>
         <div class="form-group col-md-3 text-center mt-3">

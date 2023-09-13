@@ -11,7 +11,7 @@
 			<label class="form-label">Nombre:</label>
 			<input type="text" name="nombre" id="nombre" class="form-control validate" maxlength="30">
 		    <div class="invalid-feedback">
-                    Por favor, ingrese caracteres validos.
+                    Ingrese caracteres validos.
             </div>
 		    </div>
 
@@ -19,21 +19,21 @@
 		<label class="form-label">Apellido:</label>
 		<input type="text" name="apellido" id="apellido" class="form-control validate" maxlength="30"/>
 		<div class="invalid-feedback">
-                    Por favor, ingrese caracteres validos.
+		            Ingrese caracteres validos.
         </div>
 		</div>
 		<div class="col-md-2">
 			<label class="form-label">Edad:</label>
 			<input type="text" name="edad" id="edad" class="form-control validate" maxlength="3"/> 
 		    <div class="invalid-feedback">
-                    Por favor, ingrese un número válido.
+                    Ingrese un número válido.
             </div>
 		</div>
 		<div class="col-md-5">
 		 <label class="form-label">Direccion:</label>
 		 <input type="text" name="direccion" id="direccion"  class="form-control validate" maxlength="40"/>
 		 <div class="invalid-feedback">
-                   Porfavor, ingrese su direccion.
+                   Ingrese su direccion.
             </div>
 		</div>
 

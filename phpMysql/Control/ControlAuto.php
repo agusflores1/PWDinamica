@@ -3,40 +3,33 @@
 class ControlAuto {
 
     public function agregarAuto($datos) {
-    $patente = $datos["patente"];
-    $marca = $datos["marca"];
-    $modelo = $datos["modelo"];
-    $nroDniDuenio = $datos["dniDuenio"];
-    // Verifica si el dueño existe en la base de tabla persona
-    $persona = new ControlPersona();
-    $personas = $persona->listarPersonas();
-
-    $personaEncontrada = null;
-    foreach ($personas as $persona) {
-        if ($persona->getNroDni() === $nroDniDuenio) {
-            $personaEncontrada = $persona;
-            break;
+        $exist=$this->buscarAuto($datos);
+        if(!$exist)
+        {    $patente = $datos["patente"];
+             $marca = $datos["marca"];
+             $modelo = $datos["modelo"];
+             // Verifica si el dueño existe en la base de tabla persona
+             $persona = new ControlPersona();
+             $personaEncontrada = $persona->buscarPersona($datos);
+                    if ($personaEncontrada !== null) {
+                        // El dueño existe en la base de datos, proceder a crear el registro del auto
+                        $auto = new Auto();
+                        $auto->setPatente($patente);
+                        $auto->setMarca($marca);
+                        $auto->setModelo($modelo);
+                        $auto->setObjDuenio($personaEncontrada);
+                        if ($auto->insertar()) {
+                            $retorno= "Auto cargado con exito.";
+                        } else {
+                            $retorno= "No se pudo cargar auto nuevo.";}
+                        } 
+                    else 
+                    { // El dueño no existe en la base de datos
+                        $retorno = 0; }
         }
-    }
-
-    if ($personaEncontrada !== null) {
-        // El dueño existe en la base de datos, proceder a crear el registro del auto
-        $auto = new Auto();
-        $auto->setPatente($patente);
-        $auto->setMarca($marca);
-        $auto->setModelo($modelo);
-        $auto->setObjDuenio($personaEncontrada);
-
-        if ($auto->insertar()) {
-            return "Auto agregado con éxito.";
-        } else {
-            return "Error al agregar el auto.";
-        }
-    } else {
-        // El dueño no existe en la base de datos, mostrar un mensaje de error
-        return "No se encontró un dueño con el DNI ingresado.";
-    }
-}
+        else{ $retorno="Esa patente ya existe.";}
+     return $retorno; 
+} 
 
        
         
@@ -58,6 +51,35 @@ class ControlAuto {
             $operacion= "Error al modificar el auto: " . $auto->getmensajeoperacion();
         } return $operacion;
     }
+
+        
+    public function modificarDuenio($datos) {
+        $nroDniDuenio = $datos["DNI"];
+
+        // Busca el auto por la patente
+        $auto = $this->buscarAuto($datos);
+
+        if ($auto) {
+            // Modifica al dueño del auto
+            $duenio = new Persona();
+            $duenio->setNroDni($nroDniDuenio);
+            $auto->setObjDuenio($duenio);
+
+            // Realiza la operación de actualización
+            if ($auto->modificar()) {
+                $operacion= "Dueño del auto modificado con éxito.";
+            } else {
+                $operacion= "Actualmente ese DNI es el dueño del auto.";
+            }
+        } else {
+            $operacion= "No se encontró un auto con la patente proporcionada.";
+        }
+        return $operacion;
+    }
+
+
+
+
     
     public function eliminarAuto($patente) {
         $auto = new Auto();
@@ -80,9 +102,12 @@ class ControlAuto {
     public function buscarAuto($datos) {
         $autos = $this->listarAutos();
         $autoIngresado = $datos["patente"];
+        $patenteNormalizada = strtolower(str_replace(' ', '', $autoIngresado));//se convierte a minuscula y se sacan los espacios 
         $autoEncontrado = null;
         foreach ($autos as $auto) {
-            if ($autoIngresado === $auto->getPatente()) {
+            $autoPatente = $auto->getPatente();
+            $autoNormalizado=strtolower(str_replace(' ', '', $autoPatente));//se convierte a minuscula y se sacan los espacios 
+            if ($patenteNormalizada === $autoNormalizado) { //se compara los datos normalizados para que se encuentre la patente 
                 $autoEncontrado = $auto;
                 break; // Terminar el bucle cuando se encuentre un auto
             }

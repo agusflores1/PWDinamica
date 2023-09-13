@@ -14,8 +14,9 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-light">
     <ul class="nav nav-tabs">
         <li class="nav-item"><a class="nav-link" href="/TP1/Vista/ej1/index.php">TP 1</a></li>
-        <li class="nav-item"><a class="nav-link" href="../../../TP2/Vista/Ej1/index.php">TP 2</a></li>
+        <li class="nav-item"><a class="nav-link" href="/TP2/Vista/Ej1/index.php">TP 2</a></li>
         <li class="nav-item"><a class="nav-link" href="/TP3/vista/Ej1/index.php">TP 3</a></li>
+        <li class="nav-item"><a class="nav-link" href="/phpMysql/Vista/Ej3/verAutos.php">TP 4</a></li>
     </ul>
 </nav>
 <div class="container-fluid">

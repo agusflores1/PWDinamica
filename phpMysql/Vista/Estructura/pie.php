@@ -17,11 +17,11 @@
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="/TP1/Vista/js/jquery/jquery-3.5.1.slim.min.js"></script>
-<script src="/TP1/Vista/js/popper/popper.min.js"></script>
-<script src="/TP1/Vista/js/bootstrap/4.5.2/bootstrap.min.js"></script>
-<script src="/TP1/Vista/js/bootstrap/4.5.2/bootstrapValidator.min.js"></script>
-<script type="text/javascript" src="/TP1/Vista/js/bootstrap/4.5.2/validator.js"></script>
+<script src="/phpMysql/Vista/js/jquery/jquery-3.5.1.slim.min.js"></script>
+<script src="/phpMysql/Vista/js/popper/popper.min.js"></script>
+<script src="/phpMysql/Vista/js/bootstrap/4.5.2/bootstrap.min.js"></script>
+<script src="/phpMysql/Vista/js/bootstrap/4.5.2/bootstrapValidator.min.js"></script>
+<script type="text/javascript" src="../js/validator.js"></script>
 
 </body>
 </html>

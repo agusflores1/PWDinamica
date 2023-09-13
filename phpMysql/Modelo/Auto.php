@@ -107,7 +107,7 @@ class Auto {
             Modelo = '" . $this->getModelo() . "',
             DniDuenio = '" . $duenioDni . "'
             WHERE Patente = '" . $this->getPatente() . "'";
-        echo $sql; // Agregar este echo para depuración
+       // echo $sql; // Agregar este echo para depuración
         if ($base->Iniciar()) {
             if ($base->Ejecutar($sql)) {
                 $resp = true;

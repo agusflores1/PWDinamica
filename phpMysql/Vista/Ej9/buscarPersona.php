@@ -1,18 +1,20 @@
+
+
 <?php include_once ("../Estructura/cabecera.php"); ?>
 
 <main class="col-md-6 ms-sm-auto col-lg-10 px-md-4">
     <div class="card col-sm-10 p-3">
         <div class="card-header">
-            <h3 class="text-primary">Buscar Auto:</h3>
+            <h3 class="text-primary">Buscar persona:</h3>
         </div>
         <div class="card-body">
-    <form class="needs-validation" novalidate method="get" action="accionBuscarAuto.php" name="form" id="form" onsubmit="return validarFormulario()">
+        <form class="needs-validation" novalidate method="get" action="accionBuscarPersona.php" name="form" id="form" onsubmit="return validarDni()">
         <div class="form-group row col-md-9">
-            <label>Ingrese una patente:</label>
-            <div class="col-md-4">
-                <input type="text" class="form-control" id="patente" name="patente" >
+            <label>Ingrese un DNI:</label>
+            <div class="col-md-5">
+                <input type="text" class="form-control" id="DNI" name="DNI" >
                 <div class="invalid-feedback">
-                    Por favor, ingrese una patente                
+                    Por favor, ingrese un DNI valido.                
                 </div>
             </div>
             <div class="col">

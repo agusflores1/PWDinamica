@@ -21,7 +21,7 @@
 <script src="/TP1/Vista/js/popper/popper.min.js"></script>
 <script src="/TP1/Vista/js/bootstrap/4.5.2/bootstrap.min.js"></script>
 <script src="/TP1/Vista/js/bootstrap/4.5.2/bootstrapValidator.min.js"></script>
-<script type="text/javascript" src="/TP1/Vista/js/bootstrap/4.5.2/validator.js"></script>
+<script type="text/javascript" src="/TP1/Vista/js/validator.js"></script>
 
 </body>
 </html>

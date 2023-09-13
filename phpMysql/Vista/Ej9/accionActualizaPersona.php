@@ -1,4 +1,5 @@
 
+
 <?php
     include_once ("../Estructura/cabecera.php");
     include_once ('../../Control/ControlAuto.php');
@@ -10,20 +11,14 @@
     <div class="card w-50 mb-4">
     <div class="card-body">
       <h5 class="card-title">Datos:</h5>
-      <?php
-      $datos=data_submitted();
-      $auto=new ControlAuto();
-      $persona=new ControlPersona();
-      $duenio=$persona->buscarPersona($datos);
-      if($duenio)
-      {$modificacion= $auto->modificarDuenio($datos);
-        echo $modificacion;}
-      else{
-        echo "No se encontro ninguna persona registrada con ese DNI";
-      }
+        <?php
+        $datos = data_submitted();
+        $persona = new ControlPersona();
+        $personaModificada = $persona->modificarPersona($datos);
+        echo $personaModificada;
         ?>
         <div class="d-flex justify-content-end align-items-end mt-4 pr-3 pb-3">
-            <a href="cambioDuenio.php" class="btn btn-primary">Volver</a>
+            <a href="buscarPersona.php" class="btn btn-primary">Volver</a>
         </div>
     </div>
   </div>

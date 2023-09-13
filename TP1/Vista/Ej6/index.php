@@ -1,7 +1,7 @@
 <?php  include_once ("../Estructura/cabecera.php"); ?>
 
-<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-    <div class="card col-sm-10 p-3">
+<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 mb-5">
+    <div class="card col-sm-10 p-3 mb-2">
         <div class="card-header">
             <h3 class="text-primary">Formulario:</h3>
         </div>
@@ -12,21 +12,21 @@
                         <label class="form-label">Nombre:</label>
                         <input type="text" name="nombre" id="nombre" class="form-control validate" maxlength="30">
                         <div class="invalid-feedback">
-                        Por favor, ingrese caracteres validos.
+                        Ingrese caracteres validos.
                        </div>
                     </div>
                     <div class="col-md-3">
                         <label class="form-label">Apellido:</label>
                         <input type="text" name="apellido" id="apellido" class="form-control validate" maxlength="30"> 
                         <div class="invalid-feedback">
-                            Por favor, ingrese caracteres validos.
+                            Ingrese caracteres validos.
                         </div>
                     </div>
                     <div class="col-md-2">
                         <label class="form-label">Edad:</label>
                         <input type="text" name="edad" id="edad" class="form-control validate" maxlength="3">
                         <div class="invalid-feedback">
-                            Por favor, ingrese caracteres validos.
+                            Ingrese solo numeros validos.
                         </div>
                     </div>
                 </div>
@@ -35,7 +35,7 @@
                         <label class="form-label">Direccion:</label>
                         <input type="text" name="direccion" id="direccion" class="form-control validate" maxlength="30" >
                         <div class="invalid-feedback">
-                            Por favor, ingrese su direccion.
+                            Ingrese su direccion.
                         </div>
                     </div>
                     <div class="col-md-5 mt-3">
@@ -46,7 +46,7 @@
                             <option value="Femenino">Femenino</option>
                         </select>
                          <div class="invalid-feedback">
-                            Por favor, seleccione una opcion.
+                            Seleccione una opcion.
                         </div>
                     </div>
                     <div class="col-md-5 mt-3">
@@ -64,7 +64,7 @@
                             <label class="form-check-label" for="inlineRadio3">Estudios Secundarios</label>
                         </div>
                         <div class="invalid-feedback" id="invalidCheck3Feedback">
-                            Por favor, seleccione una opcion.
+                            Seleccione una opcion.
                         </div>
                     </div>
                     <div class="col-md-5 mt-3">
@@ -86,7 +86,7 @@
                     <label>Tenis</label> 
                     </div>
                     <div class="invalid-feedback">
-                            Por favor, seleccione una opcion.
+                            Seleccione una opcion.
                         </div>
                 </div> 
                 </div>

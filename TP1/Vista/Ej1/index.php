@@ -8,7 +8,7 @@
             <div class="col-md-3">
                 <input type="text" class="form-control" id="numero" name="numero" >
                 <div class="invalid-feedback">
-                    Por favor, ingrese un número válido.
+                    Ingrese un número válido.
                 </div>
             </div>
             <div class="col">
