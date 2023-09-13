@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!---<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-xrRv1JVd0a42KGp0xpG5PA6z5z5Tz7h3+TuPxvIHdd/ClwEa5G6U1d6I5z0pNPbm" crossorigin="anonymous"> 
-    ---><title>TP phpMysql</title>
+    ---><title>TP 1</title>
     <link rel="stylesheet" href="/TP1/Vista/css/bootstrap.min.css">
     <link rel="stylesheet" href="/TP1/Vista/css/bootstrap.min.css.map">
     <link rel="stylesheet" href="/TP1/Vista/css/bootstrapValidator.min.css" >
