@@ -1,4 +1,4 @@
-    </div> <!-- Cierre del row -->
+<!-- </div>--> <!-- Cierre del row -->
 </div> <!-- Cierre del container -->
 <footer class="bg-light text-center text-white fixed-bottom">
     <div class="container">

@@ -3,3 +3,8 @@
     border-bottom: 1px solid #ccc; /* Puedes personalizar el color y el estilo del borde */
     padding-bottom: 10px; /* Añade espacio entre el borde y el contenido del header */
 }
+#row
+{
+  border-left: 1px solid #ccc;
+  height: 100%; /* Puedes personalizar el color y el estilo del borde */
+}

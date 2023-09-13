@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,11 +9,10 @@
     <link rel="stylesheet" href="/phpMysql/Vista/css/bootstrap.min.css">
     <link rel="stylesheet" href="/phpMysql/Vista/css/bootstrap.min.css.map">
     <link rel="stylesheet" href="/phpMysql/Vista/css/bootstrapValidator.min.css" >
-       <link rel="stylesheet" href="/phpMysql/Vista/css/estilos.css" >
+    <link rel="stylesheet" href="/phpMysql/Vista/css/estilos.css" >
 </head>
-
 <body>
-<div class="container-fluid ">
+<div class="container-fluid">
 <header class="d-flex justify-content-center py-3">
       <ul class="nav nav-pills">
         <li class="nav-item"><a  href="/TP1/Vista/ej1/index.php" class="nav-link " aria-current="page">TP 1</a></li>
@@ -24,10 +23,10 @@
     </header>
 <!-- aca cerraba
 <div class="container-fluid">-->
-<div class="row">
+<div class="row"  style="height: 100%;">
 <button class="btn btn-primary btn-sm d-md-none" id="sidebarToggle">Ejercicios</button>
 <div class="col" id="col">
-<nav id="sidebar" class="d-none d-md-block sidebar flex-column">
+<nav id="sidebar" class="d-none d-md-block sidebar flex-column" >
                 <ul class="nav flex-column">
                     <li class="nav-item"><a class="nav-link " href="../Ej3/verAutos.php">Ejercicio 1</a></li>
                     <li class="nav-item"><a class="nav-link" href="../Ej4/buscarAutos.php">Ejercicio 2</a></li>

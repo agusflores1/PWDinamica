@@ -1,6 +1,9 @@
 <?php include_once ("../Estructura/cabecera.php"); ?>
 
-<main class="col-md-6 ms-sm-auto col-lg-10 px-md-4">
+<div>
+
+
+<main class="col-md-10 ms-sm-auto col-lg-10 px-md-4" style="height: 100vh;">
     <div class="card col-sm-10 p-3">
         <div class="card-header">
             <h3 class="text-primary">Buscar Auto:</h3>
@@ -23,6 +26,8 @@
         </div>
     </div>
 </main>
+
+</div>
 
 <?php include ("../Estructura/pie.php"); ?>
 
