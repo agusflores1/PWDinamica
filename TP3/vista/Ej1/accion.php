@@ -3,7 +3,7 @@
     include_once ('../../control/Archivos.php');
     include_once("../../utiles/funciones.php");
     ?>
-<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4" style="margin-top: 10px;">
  <div style="max-height: calc(100vh - 80px);">
 <div class="card w-50">
     <div class="card-body">

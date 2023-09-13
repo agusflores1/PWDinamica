@@ -6,7 +6,7 @@
     include_once '../../configuracion.php';
   //  include_once("../../util/funciones.php");
     ?>
-    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 mb-5">
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 mb-5" style="margin-top: 10px;">
     <div class="card w-50 mb-5">
     <div class="card-body mb-5">
       <h5 class="card-title">Resultados:</h5>

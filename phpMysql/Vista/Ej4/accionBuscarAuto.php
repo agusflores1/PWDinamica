@@ -28,7 +28,7 @@ if ($autoEncontrado) {
 }
 ?>
 
-<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 mb-4">
+<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 mb-4" style="margin-top: 10px;">
     <div class="card w-50 mb-4">
         <div class="card-body">
             <h5 class="card-title">Datos:</h5>

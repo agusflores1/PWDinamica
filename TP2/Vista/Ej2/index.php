@@ -1,6 +1,6 @@
 
 <?php include_once("../Estructura/cabecera.php"); ?>
-<main class="col-md-9 col-lg-10 px-md-4 mb-5">
+<main class="col-md-9 col-lg-10 px-md-4 mb-5" style="margin-top: 10px;">
     <div class="card col-md-12 p-3 mb-3">
         <div class="card-header mb-2">
             <h3 class="text-primary">

@@ -1,3 +1,14 @@
+
+document.addEventListener("DOMContentLoaded", function () {
+    const sidebar = document.getElementById("sidebar");
+    const sidebarToggle = document.getElementById("sidebarToggle");
+
+    // Agregar un evento al botón para mostrar/ocultar el sidebar
+    sidebarToggle.addEventListener("click", function () {
+        sidebar.classList.toggle("d-none");
+    });
+});
+
 //EJ1
 $(document).ready(function () {
     var numeroInput = $("#numero");

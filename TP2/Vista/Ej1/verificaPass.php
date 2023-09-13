@@ -4,7 +4,7 @@
     include_once ('../../Control/control_2.php');
     include_once("../../utiles/funciones.php");
     ?>
-<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4" style="margin-top: 10px;">
 <div class="card w-50">
     <div class="card-body">
       <h5 class="card-title">Resultado:</h5>

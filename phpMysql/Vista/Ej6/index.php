@@ -1,6 +1,6 @@
 <?php  include_once ("../Estructura/cabecera.php"); ?>
 
-<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4"  style="margin-top: 10px;">
     <div class="card col-sm-10 p-3">
         <div class="card-header">
             <h3 class="text-primary">Ingresar Persona:</h3>

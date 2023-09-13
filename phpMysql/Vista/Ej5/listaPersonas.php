@@ -3,7 +3,7 @@ include_once("../Estructura/cabecera.php");
 include_once('../../Control/ControlPersona.php');
 include_once '../../configuracion.php';
 ?>
-<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 mb-5">
+<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 mb-5"  style="margin-top: 10px;">
     <div class="card w-50 mb-5">
         <div class="card-body mb-5">
             <div class="d-flex justify-content-between align-items-center">
