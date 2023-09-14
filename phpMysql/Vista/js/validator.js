@@ -200,6 +200,7 @@ function validarAuto() {
         const fechaNac = document.getElementById("fechaNac");
         const telefono = document.getElementById("telefono");
         const domicilio = document.getElementById("domicilio");
+    
         if (nombre.value.trim() === "" || !/^[A-Za-z\s]+$/.test(nombre.value.trim())) {
             nombre.classList.add("is-invalid");
             isValid = false;
@@ -215,17 +216,12 @@ function validarAuto() {
         }
     
         if (telefono.value.trim() === "" || !/^[0-9]+$/.test(telefono.value.trim())) {
-            telefono.classList.add("is-invalid"); // Corrección aquí
+            telefono.classList.add("is-invalid");
             isValid = false;
         } else {
-            telefono.classList.remove("is-invalid"); // Corrección aquí
+            telefono.classList.remove("is-invalid");
         }
-        if (domicilio.value.trim() === "") {
-            domicilio.classList.add("is-invalid");
-            isValid = false;
-        } else {
-            domicilio.classList.remove("is-invalid");
-        }
+    
         if (fechaNac.value.trim() === "") {
             fechaNac.classList.add("is-invalid");
             isValid = false;
@@ -240,6 +236,13 @@ function validarAuto() {
             } else {
                 fechaNac.classList.remove("is-invalid");
             }
+        }
+    
+        if (domicilio.value.trim() === "") {
+            domicilio.classList.add("is-invalid");
+            isValid = false;
+        } else {
+            domicilio.classList.remove("is-invalid");
         }
     
         return isValid;
