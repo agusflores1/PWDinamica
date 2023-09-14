@@ -214,7 +214,12 @@ function validarAuto() {
         } else {
             apellido.classList.remove("is-invalid");
         }
-    
+        if (domicilio.value.trim() === "") {
+            domicilio.classList.add("is-invalid");
+            isValid = false;
+        } else {
+            domicilio.classList.remove("is-invalid");
+        }
         if (telefono.value.trim() === "" || !/^[0-9]+$/.test(telefono.value.trim())) {
             telefono.classList.add("is-invalid");
             isValid = false;
@@ -236,13 +241,6 @@ function validarAuto() {
             } else {
                 fechaNac.classList.remove("is-invalid");
             }
-        }
-    
-        if (domicilio.value.trim() === "") {
-            domicilio.classList.add("is-invalid");
-            isValid = false;
-        } else {
-            domicilio.classList.remove("is-invalid");
         }
     
         return isValid;
