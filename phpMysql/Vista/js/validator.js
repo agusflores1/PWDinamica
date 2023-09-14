@@ -224,7 +224,7 @@ function validarAuto() {
             domicilio.classList.add("is-invalid");
             isValid = false;
         } else {
-            nombre.classList.remove("is-invalid");
+            domicilio.classList.remove("is-invalid");
         }
         if (fechaNac.value.trim() === "") {
             fechaNac.classList.add("is-invalid");
