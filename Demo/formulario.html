@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+<!--
+    Programado por Luis Cabrera Benito 
+  ____          _____               _ _           _       
+ |  _ \        |  __ \             (_) |         | |      
+ | |_) |_   _  | |__) |_ _ _ __ _____| |__  _   _| |_ ___ 
+ |  _ <| | | | |  ___/ _` | '__|_  / | '_ \| | | | __/ _ \
+ | |_) | |_| | | |  | (_| | |   / /| | |_) | |_| | ||  __/
+ |____/ \__, | |_|   \__,_|_|  /___|_|_.__/ \__, |\__\___|
+         __/ |                               __/ |        
+        |___/                               |___/         
+    
+    
+    Blog:       https://parzibyte.me/blog
+    Ayuda:      https://parzibyte.me/blog/contrataciones-ayuda/
+    Contacto:   https://parzibyte.me/blog/contacto/
+-->
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1,
+            shrink-to-fit=no">
+        <meta name="description" content="Formulario con reCAPTCHA v2 by
+            parzibyte">
+        <meta name="author" content="Parzibyte">
+        <title>Formulario con reCAPTCHA v2 by parzibyte</title>
+        <!-- No olvides cargar el script -->
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    </head>
+
+    <body>
+        <h2 class="text-center">Bienvenido de nuevo</h2>
+        <form action="procesar.php" method="POST">
+            <label for="correo">Correo</label>
+            <br>
+            <input id="correo" name="correo"
+                type="email"
+                placeholder="Correo electrónico">
+            <br><br>
+            <label for="palabraSecreta">Contraseña</label>
+            <br>
+            <input id="palabraSecreta" name="palabraSecreta"
+                type="password"
+                placeholder="Contraseña">
+            <br>
+            <br>
+            <!--
+                            A continuación colocamos el div en donde será
+                            inyectado el input
+                        -->
+            <div
+                class="g-recaptcha"
+                data-sitekey="AQUÍ_VA_TU_CLAVE_DE_SITIO">
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary mb-2">
+                Entrar
+            </button>
+        </form>
+    </body>
+</html>
