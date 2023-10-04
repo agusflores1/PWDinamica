@@ -42,10 +42,10 @@ define("CLAVE_SECRETA", "6LfvL2AoAAAAAN8fZt2hRdSfO2Eat_iLduvfW7rM");
                         $verificacion = $objDatos->verificarPass($datos, $usuarios);
                         echo '<div class="alert alert-dark" role="alert">' . $verificacion . ' </div>';
                     } else {
-                        echo("Lo siento, parece que eres un robot");
+                        echo("Lo siento, parece que eres un robot. Realiza nuevamente el captcha.");
                     }
                 } else {
-                    echo("Lo siento, parece que eres un robot");
+                    echo("Lo siento, parece que eres un robot.  Realiza nuevamente el captcha.");
                 }
                 ?>
                 <br><a href="index.php" class="btn btn-primary">Volver</a>
