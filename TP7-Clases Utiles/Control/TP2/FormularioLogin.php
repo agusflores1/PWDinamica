@@ -12,12 +12,11 @@ class FormularioLogin{
 	}
 	
 	
-	/**
+ /**
  * Verifica el token del captcha y regresa true o false
  * true en caso de que el usuario haya pasado la prueba
  * false en caso contrario
  * 
- */
 function verificarToken($token, $claveSecreta)
 {
     # La API en donde verificamos el token
@@ -66,6 +65,6 @@ function verificarToken($token, $claveSecreta)
     
    
 }
-
-}
+*/
+} 
 ?>

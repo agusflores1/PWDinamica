@@ -2,9 +2,15 @@
 include_once("../../../includes/configuracion.php");
 include_once(STRUCTURE_PATH . "head.php");
 ?>
-<!-- No olvides cargar el script -->
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-<!-- Esto va en scripts.php -->
+     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+     <script>
+
+      function onLoginButtonClick() {
+      grecaptcha.execute();  }
+
+    </script>
+
 
 <main class="p-5 text-center bg-light">
   <div class="justify-content-md-center align-items-center">
@@ -41,26 +47,26 @@ include_once(STRUCTURE_PATH . "head.php");
             </div>
           </div>
 
-
-          <div class="d-grid">
-            <input type="submit" class="btn btn-primary" value="Login">
+          <!-- reCAPTCHA invisible -->
+          <div class="g-recaptcha" 
+          data-sitekey="6LePBmAoAAAAABb-_4mXbM24-XurBUG3wnF73FLG"
+          data-callback="onSubmit" data-size="invisible">
           </div>
+
+
+
+          <!-- Botón para enviar el formulario -->
+          <button type="submit" class="btn btn-primary" onclick="onLoginButtonClick();">Login</button>
+          
+
+       
+         
         </form>
       </div>
     </div>
   </div>
-  <div id="recaptcha" class="g-recaptcha"
-      data-sitekey="6LePBmAoAAAAABb-_4mXbM24-XurBUG3wnF73FLG"
-      data-callback="onSubmit"
-      data-size="invisible">
-  </div>
-
-
 </main>
 
 
-         
-
 
 <?php include(STRUCTURE_PATH . "footer.php"); ?>
-

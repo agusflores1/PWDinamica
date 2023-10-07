@@ -1,10 +1,8 @@
 <?php
 include_once("../../../includes/configuracion.php");
 include_once(STRUCTURE_PATH . "head.php");
-include_once(ROOT_PATH . 'Control/TP2/FormularioLogin.php');
 
-# Aquí pon la clave secreta que obtuviste en la página de developers de Google
-define("CLAVE_SECRETA", "6LfvL2AoAAAAAN8fZt2hRdSfO2Eat_iLduvfW7rM");
+require_once '../../../Control/TP2/ReCaptcha/src/autoload.php';
 
 ?>
 <main class="p-5 text-center bg-light">
@@ -24,28 +22,39 @@ define("CLAVE_SECRETA", "6LfvL2AoAAAAAN8fZt2hRdSfO2Eat_iLduvfW7rM");
                 $datos = data_submitted();
                 $objDatos = new FormularioLogin();
 
-                ///////////////////////////////////////
-                //Verifico
-                # Comprobamos si enviaron el dato
-                if (isset($datos["g-recaptcha-response"]) && !empty($datos["g-recaptcha-response"])) {
-                    # Antes de comprobar usuario y contraseña, vemos si resolvieron el captcha
-                    $token = $datos["g-recaptcha-response"];
-                    $verificado = $objDatos->verificarToken($token, CLAVE_SECRETA);
+                /////////////////////////////////////////////////////////////////////////////////////
+                $secretKey = "6LfvL2AoAAAAAN8fZt2hRdSfO2Eat_iLduvfW7rM"; // CLAVE SECRETA
+                $recaptcha = new \ReCaptcha\ReCaptcha($secretKey);
 
-                    if ($verificado) {
-                        /** 
-                         * Llegados a este punto podemos confirmar que el usuario
-                         * no es un robot. Aquí debes hacer lo que se deba hacer, es decir,
-                         * comprobar las credenciales, darle acceso, etcétera, pues
-                         * ya ha pasado el captcha
-                         */
-                        $verificacion = $objDatos->verificarPass($datos, $usuarios);
-                        echo '<div class="alert alert-dark" role="alert">' . $verificacion . ' </div>';
+                if ($datos) {
+                   
+                    // Verifica el reCAPTCHA
+                    if (isset($datos['g-recaptcha-response'])) {
+                        $response = $datos['g-recaptcha-response']; //resultado si resolvieron el captcha
+                        $remoteIp = $_SERVER['REMOTE_ADDR']; // la dirección IP del usuario
+                
+                        $recaptchaResponse = $recaptcha->verify($response, $remoteIp); //esta función se utiliza para verificar la respuesta CAPTCHA proporcionada por un usuario y 
+                                                                                       //realizar validaciones adicionales según las configuraciones opcionales.
+                                                                                       // Si se encuentran errores de validación, se devuelve una respuesta con los errores.
+                
+                        if ($recaptchaResponse->isSuccess()) {
+                            // El reCAPTCHA se pasó con éxito, puedes continuar con la autenticación del usuario.
+                            $verificacion = $objDatos->verificarPass($datos, $usuarios);
+                            echo '<div class="alert alert-dark" role="alert">' . $verificacion . ' </div>';
+                            
+                           
+                        } else {
+                            // El reCAPTCHA no se pasó, maneja el error adecuadamente.
+                            $errors = $recaptchaResponse->getErrorCodes();
+                            // Maneja los errores, por ejemplo, muestra un mensaje al usuario.
+                            foreach ($errors as $error) {
+                                echo "Error de reCAPTCHA: $error<br>";
+                            }
+                        }
                     } else {
-                        echo("Lo siento, parece que eres un robot. Realiza nuevamente el captcha.");
+                        // El reCAPTCHA no se proporcionó, maneja el error adecuadamente.
+                        echo "Por favor, completa el reCAPTCHA.";
                     }
-                } else {
-                    echo("Lo siento, parece que eres un robot.  Realiza nuevamente el captcha.");
                 }
                 ?>
                 <br><a href="index.php" class="btn btn-primary">Volver</a>
