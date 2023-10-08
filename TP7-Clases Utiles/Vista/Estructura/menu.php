@@ -17,7 +17,8 @@
               <hr class="dropdown-divider">
             </li>
             <li><a class="dropdown-item" href="<?php echo BASE_URL ?>Vista/TP7/Demov2.1/index.php">Demo v2 (Checkbox)</a></li>
-            <li><a class="dropdown-item" href="<?php echo BASE_URL ?>Vista/TP7/demov2.2/index.php">Demo v2 (Invisible)</a></li>
+            <li><a class="dropdown-item" href="<?php echo BASE_URL ?>Vista/TP7/Demov2.2/index.php">Demo v2 (Invisible)</a></li>
+            <li><a class="dropdown-item" href="<?php echo BASE_URL ?>Vista/TP7/Demov3/index.php">Demo v3 (score)</a></li>
             
           </ul>
 
