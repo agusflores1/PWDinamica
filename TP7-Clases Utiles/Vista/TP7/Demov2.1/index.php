@@ -2,9 +2,6 @@
 include_once("../../../includes/configuracion.php");
 include_once(STRUCTURE_PATH . "head.php");
 ?>
-<!-- No olvides cargar el script -->
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-<!-- Esto va en scripts.php -->
 
 <main class="p-5 text-center bg-light">
   <div class="justify-content-md-center align-items-center">

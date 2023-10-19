@@ -27,44 +27,38 @@ $(document).ready(function () {
 });
 
 
-function onLoginButtonClick() {
-  grecaptcha.execute();
-} 
 
-
-    function onSubmit(token) {
-  // La respuesta del reCAPTCHA se pasa como argumento 'token'.
-  var captchaResponse = token;
-  var claveValue = $("#password").val().trim();
-  var usuarioValue = $("#usuario").val().trim();
+// Función para manejar el clic del botón "Login"
+function validarUsuario() {
   var isValid = true;
 
-  // Validar campo de usuario
+  // Validación de campo de usuario y contraseña
+  var usuarioValue = $("#usuario").val().trim();
+  var claveValue = $("#password").val.trim();
+
   if (usuarioValue === "" || usuarioValue.length < 4) {
-    $("#usuario").addClass("is-invalid");
-    isValid = false;
+      $("#usuario").addClass("is-invalid");
+      isValid = false;
   } else {
-    $("#usuario").removeClass("is-invalid");
+      $("#usuario").removeClass("is-invalid");
   }
 
-  // Validar campo de contraseña
-  if (claveValue === "" || usuarioValue === claveValue || claveValue.length < 8) {
-    $("#password").addClass("is-invalid");
-    isValid = false;
+  if (claveValue === "" || claveValue.length < 8 || claveValue === usuarioValue) {
+      $("#password").addClass("is-invalid");
+      isValid = false;
   } else {
-    $("#password").removeClass("is-invalid");
-  }
-
-  // Validación de reCAPTCHA
-  if (captchaResponse === "") {
-    alert("Por favor, completa el reCAPTCHA antes de enviar el formulario.");
-    isValid = false;
+      $("#password").removeClass("is-invalid");
   }
 
   if (isValid) {
-    // El formulario es válido, puedes enviarlo.
-    document.getElementById("formBienvenido").submit();
+      // El formulario es válido, puedes enviarlo.
+      document.getElementById("formBienvenido1").submit();
+  } else {
+      alert("Por favor, completa los campos y verifica el reCAPTCHA.");
   }
 }
+
+
+
 
 

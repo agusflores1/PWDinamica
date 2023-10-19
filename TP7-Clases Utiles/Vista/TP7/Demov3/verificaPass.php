@@ -24,16 +24,18 @@ define("CLAVE_SECRETA", "6LePBmAoAAAAAHfZWp_zV6lsM-orqkxsCbwPpDJv");
           array('usuario' => 'Usuario', 'password' => '12345678A'),
           array('usuario' => 'Usuario1', 'password' => '87654321A')
           // agregar más usuarios aquí
-        );
-
-        if (isset($_POST['g-recaptcha-response'])) {
+        );  
+//var_dump($datos['g-recaptcha-response']);
+        if (isset($datos['g-recaptcha-response'])) {
           $recaptcha = new \ReCaptcha\ReCaptcha(CLAVE_SECRETA);
-          $resp = $recaptcha->setExpectedHostname($_SERVER['SERVER_NAME'])->verify($_POST['g-recaptcha-response'], $_SERVER['REMOTE_ADDR']);
-          
+          $resp = $recaptcha->setExpectedHostname($_SERVER['SERVER_NAME'])->verify($datos['g-recaptcha-response'], $_SERVER['REMOTE_ADDR']);
+          //var_dump($resp);
           if ($resp->isSuccess()) {
             // El reCAPTCHA se pasó con éxito, verifica las credenciales del usuario
             $verificacion = $objDatos->verificarPass($datos, $usuarios);
             echo '<div class="alert alert-dark" role="alert">' . $verificacion . ' </div>';
+            echo json_encode($resp->toArray());
+           
           } else {
             // Maneja el error de reCAPTCHA si no se pasa
             $errors = $resp->getErrorCodes();

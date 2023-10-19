@@ -22,8 +22,8 @@ require_once '../../../Control/TP2/ReCaptcha/src/autoload.php';
                 $datos = data_submitted();
                 $objDatos = new FormularioLogin();
 
-                /////////////////////////////////////////////////////////////////////////////////////
-                $secretKey = "6LfvL2AoAAAAAN8fZt2hRdSfO2Eat_iLduvfW7rM"; // CLAVE SECRETA
+                ////////////////////////////////////Creamos un objeto de la clase recaptcha/////////////////////////////////////////////////
+                $secretKey = "6LfvL2AoAAAAAN8fZt2hRdSfO2Eat_iLduvfW7rM"; // CLAVE SECRETA: Se define en administracion en Google
                 $recaptcha = new \ReCaptcha\ReCaptcha($secretKey);
 
                 if ($datos) {
@@ -36,6 +36,7 @@ require_once '../../../Control/TP2/ReCaptcha/src/autoload.php';
                         $recaptchaResponse = $recaptcha->verify($response, $remoteIp); //esta función se utiliza para verificar la respuesta CAPTCHA proporcionada por un usuario y 
                                                                                        //realizar validaciones adicionales según las configuraciones opcionales.
                                                                                        // Si se encuentran errores de validación, se devuelve una respuesta con los errores.
+                      
                 
                         if ($recaptchaResponse->isSuccess()) {
                             // El reCAPTCHA se pasó con éxito, puedes continuar con la autenticación del usuario.

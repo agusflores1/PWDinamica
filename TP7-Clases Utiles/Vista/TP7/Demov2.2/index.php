@@ -3,7 +3,27 @@ include_once("../../../includes/configuracion.php");
 include_once(STRUCTURE_PATH . "head.php");
 ?>
 
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="https://www.google.com/recaptcha/api.js?render=6LePBmAoAAAAABb-_4mXbM24-XurBUG3wnF73FLG"></script>
+
+<script>
+    $(document).ready(function(){
+    $("#submit").click(function(){   
+        grecaptcha.ready(function() {
+          grecaptcha.execute('6LePBmAoAAAAABb-_4mXbM24-XurBUG3wnF73FLG',
+           {action: 'validarUsuario'
+        }).then(function(token) {
+              // 
+              $("#formBienvenido1").prepend('<input type="hidden" name="token" value="'+token+'" >'); //agrega elemento de tipo oculto
+              $("#formBienvenido1").prepend('<input type="hidden" name="action" value="validarUsuario" >'); //agrega elemento de tipo oculto
+              $("#formBienvenido1").submit();
+          });
+        });
+
+    })
+    })
+    
+  </script>
+
 
 <main class="p-5 text-center bg-light">
     <div class="justify-content-md-center align-items-center">
@@ -12,7 +32,7 @@ include_once(STRUCTURE_PATH . "head.php");
                 <h3>LOGIN</h3>
             </div>
             <div class="card-body">
-                <form class="d-flex flex-column needs-validation" method="post" action="verificaPass.php" id="formBienvenido" name="formBienvenido">
+                <form class="d-flex flex-column needs-validation" method="post" action="verificaPass.php" id="formBienvenido1" name="formBienvenido1">
                     <div class="mb-3">
                         <div class="input-group">
                             <span class="input-group-text" id="basic-addon1">
@@ -42,11 +62,10 @@ include_once(STRUCTURE_PATH . "head.php");
                         </div>
                     </div>
 
-                    <!-- reCAPTCHA invisible -->
-                    <div class="g-recaptcha" data-sitekey="6LePBmAoAAAAABb-_4mXbM24-XurBUG3wnF73FLG" data-callback="onSubmit" data-size="invisible">
+                    <button type="button" class="btn btn-primary" id="submit">Login</button>
+
+</form>             
 </div>
-                    <!-- Botón para iniciar sesión con la llamada a onLoginButtonClick() -->
-                    <button type="button" class="btn btn-primary" onclick="onLoginButtonClick();">Login</button>
 
                 </form>
             </div>

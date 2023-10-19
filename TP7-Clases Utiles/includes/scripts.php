@@ -5,3 +5,7 @@
 <script src="<?php echo BASE_URL ?>Vista/js/validator2.js"></script>
 <script src="<?php echo BASE_URL ?>Vista/js/validator3.js"></script>
 
+<!-- No olvides cargar el script -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+
