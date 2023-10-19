@@ -43,7 +43,7 @@ include_once(STRUCTURE_PATH . "head.php");
                         <input type="hidden" id="recaptchaToken" name="g-recaptcha-response">
 
                         <!-- Botón para enviar el formulario -->
-                        <button type="submit" class="btn btn-primary" onclick="validarUsuario()">Login</button>
+                        <button type="submit" class="btn btn-primary">Login</button>
                     </form>
                 </div>
             </div>
