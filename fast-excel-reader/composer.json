@@ -1,0 +1,6 @@
+{
+    "require": {
+        "avadim/fast-excel-reader": "^2.9",
+        "google/recaptcha": "^1.2"
+    }
+}

@@ -1,14 +1,12 @@
 <?php
 include_once("../../../includes/configuracion.php");
 include_once(STRUCTURE_PATH . "head.php");
-
 require_once '../../../Control/TP2/ReCaptcha/src/autoload.php';
 
 # Aquí definiste la clave secreta que obtuviste en la página de desarrolladores de Google
 define("CLAVE_SECRETA", "6LePBmAoAAAAAHfZWp_zV6lsM-orqkxsCbwPpDJv");
 
 ?>
-
 <main class="p-5 text-center bg-light">
   <div class="justify-content-md-center align-items-center ">
     <div class="card shadow col-sm-8 col-md-6 col-lg-5 col-xl-4 mx-auto">
